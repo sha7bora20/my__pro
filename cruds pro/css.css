@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #2f256b;
+    color: #c57272;
+    font-family: system-ui;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: #190d0d;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    color: #fff;
+}
+input:focus{
+    background: #626161;
+    transform: scale(1.1);
+}
+.price input{
+    width: 100%;
+}
+#total{
+    background: #8f4343;
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+#total::before{
+    content: 'Total :  ';
+}
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: #1a348c;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 0;
+    margin: 3px 0;
+    transition: 0.5s;
+    font-size: 18px;
+}
+button:hover{
+    background: #d522d2;
+    letter-spacing: 1px;
+}
+.btnsearch{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.btnsearch button{
+    width: 45%;
+}
+.outputs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.searchBlock{
+    width: 100%;
+}
+#deleteAll{
+    width: 100%;
+    margin: 15px 0;
+    padding: 4px 0;
+    
+}
+#deleteAll button{
+    background: #cb0808;
+}
+table{
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    margin: 10px 0;
+    border:  15px solid black;
+    border-radius: 20px;
+    background-color: #908c8c;
+    
+}
+table th{
+    text-transform: uppercase;
+}
+th, td{
+    padding: 5px;
+}
+table tr{
+    border: 10px solid rgb(198, 114, 114);
+    background-color: #40409a;
+}
+tbody tr{
+    width: 100%;
+}
+.layout{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 54455;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    background-color: rgba(0,0,0,0.7);
+}
+.none{
+    display: none;
+}
+
+
+/* ============================= */
+.validata{
+    color: red;
+}
+#validation{
+    display: none;
+}
+.price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.price div{
+    width: 23%;
+    /* margin-right: 10px; */
+}
+.price .total{
+    width: 100%;
+    margin: 4px 0px;
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+    appearance: none;
+}
+@media (max-width: 1050px){
+    .price div{
+        width: 19%;
+    }
+    .price .total{
+        width: 8%;
+    }
+}
+@media (max-width: 575px){
+    .price div{
+        width: 45%;
+    }
+    .price .total{
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 455px){
+    .btnsearch button{
+        width: 100%;
+    }
+}

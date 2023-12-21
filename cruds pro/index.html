@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.main.css">
+
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="head">
+            <h2>curd</h2>
+            <p>procuct management system</p>
+        </div>
+
+        <div class="inputs">
+
+            <input type="text" placeholder="title" id="title">
+            <span id="validation" class="validata">You must enter data</span>
+
+            <div class="price">
+                <div>
+                    <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                    <!-- <span id="validation" class="validata">You must enter data</span> -->
+                </div>
+                <div>
+                    <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                    <!-- <span id="validation" class="validata">You must enter data</span> -->
+                </div>
+                <div>
+                    <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                    <!-- <span id="validation" class="validata">You must enter data</span> -->
+                </div>
+                <div>
+                    <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                    <!-- <span id="validation" class="validata">You must enter data</span> -->
+                </div>
+                <div class="total">
+                    <input type="number" placeholder="Total" id="total">
+                </div>
+            </div>
+            <input type="date" id="date">
+            <input type="time" id="time">
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+
+            <button id="submit">Create</button>
+        </div>
+
+
+
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+                <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchtitle">search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchcategory">search By category</button>
+                </div>
+            </div>
+
+            <div id="deleteAll">
+
+            </div>
+
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>Date</th>
+                    <th>time</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                    <!-- <th>show</th> -->
+                </tr>
+
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="layout" class="layout none">
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- <p>Modal body text goes here.</p> -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" onclick="showmodal()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+    <script src="main.js></script>
+</body>
+
+</html>
